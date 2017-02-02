@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CEMRI</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/cemri.css" rel="stylesheet">
+    <link href="css/cermriLoader.css" rel="stylesheet">
+  </head>
+
+  <body ng-app="cemriApp">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" alt="">
+        </a>
+      </div>
+        <div class="nav navbar-nav navbar-right">
+          <h3 class="header-title">CEMRI 2016</h3>
+          <div class="header-subtitle">
+            <h5>Central Mediterranean Migration</h5>
+            <h5>Research Initiative</h5>
+          </div>
+        </div>
+    </nav>
+    <div id="loader-wrapper">
+      <div id="loader">
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 chart">
+          <h5>Assessment Locations</h5>
+          <d3-vertical-bars type="location" width="400" height="230"></d3-vertical-bars>
+        </div>
+        <div class="col-md-4 chart">
+          <h5>Region of Origin</h5>
+          <d3-donut-chart type="regOrigin" width="320" height="230"></d3-donut-chart>
+        </div>
+        <div class="col-md-4 chart">
+          <h5>No. of attempts</h5>
+          <d3-horizontal-bars type="attempts" width="400" height="230"></d3-horizontal-bars>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 chart">
+          <h5>Migration Movements</h5>
+          <d3-cemri-map width="1100" height="450"></d3-cemri-map>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="libs/angular.js"></script>
+    <script src="libs/d3.js"></script>
+    <script src="libs/crossfilter.min.js"></script>
+    <script src="libs/jquery.min.js"></script>
+    <!--script src="libs/bootstrap.min.js"></script-->
+    <script src="app/app.js"></script>
+    <script src="app/cityCoordinates.js"></script>
+    <script src="app/d3/d3directives.js"></script>
+  </body>
+</html>
